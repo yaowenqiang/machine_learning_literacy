@@ -40,3 +40,67 @@ Straight forward and obvious  | Vague and tricky to understand
 ------- | Supervised  | Unsupervised | Reinforcement  | 
 Objective  | Predict future values or categories  | Organize data based on underlying structure  | Adapt based on the rewards and data from the surrounding environment | 
 Learning Source | Output dataset | input data patterns | Environment state and rewards | 
+
+
+## Learning Modes
+
++ Batch Learning
++ Online Learning
+
+## Machine Learning Pipeline
+
+
+### Problem Definition
+
+Five question ML can answer
+
++ Is this A or B ? Will this customer by or not ?
++ Is this wired 
++ How much - or how many ? How many items well i see in upcoming quoter? 
++ How is this organized ? What are the different customer categories do I have ?
++ What should i do next?
+
+### Data sourcing
+
++ Several data sources may exist
+  + RESTful Endpoints
+  + File integration
+  + SOAP Endpoints
+  + SQL Table
+  + Sensors with proprietary format
+
+### Data preparing
+
++ Several data preparation actions
+  + Dealing with missing data
+  + Dropping unnecessary attributes
+  + Detecting outliers
+  + Etc.
+
+### data Segregation
+
+Data is segregated to
+
++ Training set
++ Validation set
+
+### Model Training
+
+Machine Learning algorithms adjusts
+usually on-shelf recipe
+May need trying several algorithms
+
+### Model evaluation
+
+Examining model performance using validation data
+Different performance measures based on the algorithm type+
+
+### Model deployment
+
+Making model useful for business
+Deployed Machine Learning model can take several formats
+
+### model monitoring
+
+
+
