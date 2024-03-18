@@ -104,3 +104,32 @@ Deployed Machine Learning model can take several formats
 
 
 
++ mean
++ median
++ percentiles
+
+Standard Deviation(标准差)
+
++ Consider all items
++ Considers data distribution
++ Harder to calculate
+
+
+## Bivariate Measures(双变量测量)
+
+## Correlation(相关性)
+
++  Positive Correlation
++  Negative  Correlation
++  No  Correlation
+
+## Correlation Policy
+
+Correlation Fallacy(相关性谬误)
+
+Correlation does not imply casuation
+("With this, therefore because of this" fallacy)
+
+
+## Correlation(相关性)
+
