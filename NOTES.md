@@ -133,3 +133,25 @@ Correlation does not imply casuation
 
 ## Correlation(相关性)
 
+## Density Graphs(密度曲线图)
+
+## Common Distribution Types
+
++ Normal Distribution(正太分布)
++ Skewed Distribution(偏态分布)
++ Exponential Distribution(指数分布)
+
+## Why Histograms and Density Graphs ? 
+
++ Detecting impossible values
++ Identifying the shape of the data
++ Detecting errors and mistakes in the data
+
+interquartile range(四分位距)
+
+## Box and Whisker Plot(盒形图与箱须图)
+
+## Scatter Plot(散点图)
+
+
+
