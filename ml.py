@@ -3,6 +3,7 @@ import numpy
 import warnings
 from matplotlib import pyplot as plt
 from pandas.plotting._matplotlib import scatter_matrix
+import seaborn as sns
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 pandas.set_option('display.max_rows', 500)
 pandas.set_option('display.max_columns', 500)
@@ -46,9 +47,15 @@ ic(df.corr(method='pearson'))
 #plt.suptitle('Box and Whisker', y=1.00, fontweight='bold', fontsize=40)
 #plt.show()
 
-Axes = scatter_matrix(df, figsize=(15,15))
-plt.suptitle('Scatter Matrix', y=1.00, fontweight='bold', fontsize=30)
-plt.rcParams['axes.labelsize'] = 15
-[plt.setp(item.yaxis.get_majorticklabels(), 'size', 5) for item in Axes.ravel()]
-[plt.setp(item.xaxis.get_majorticklabels(), 'size', 5) for item in Axes.ravel()]
-plt.show()
+#Axes = scatter_matrix(df, figsize=(15,15))
+#plt.suptitle('Scatter Matrix', y=1.00, fontweight='bold', fontsize=30)
+#plt.rcParams['axes.labelsize'] = 15
+#[plt.setp(item.yaxis.get_majorticklabels(), 'size', 5) for item in Axes.ravel()]
+#[plt.setp(item.xaxis.get_majorticklabels(), 'size', 5) for item in Axes.ravel()]
+#plt.show()
+
+plt.figure(figsize=(11,11))
+plt.style.use('default')
+sns.heatmap(df.corr(), annot=True)
+
+
