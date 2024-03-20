@@ -154,4 +154,29 @@ interquartile range(四分位距)
 ## Scatter Plot(散点图)
 
 
+euclidean distance(欧几里得距离)
+
+设有两点 P 和 Q，它们的坐标分别为 P=(x1, y1) 和 Q=(x2, y2)，那么 P 和 Q 之间的欧几里得距离 D 可以用以下公式计算：
+
+ D = sqrt((x2-x1)^2 + (y2-y1)^2)
+
+
+## K-Means clustering and Data Scale
+
+
+Euclidean distance is affected by the magnitudes(量级) of the input dataset, and since conversion units(e.g, inch to cm) changes the magnitude, Euclidean Distance results will change
+
+
+## Eliminating Scale Effect
+
+### Data Scaling (数据绽放)
+
++ Standardization - Removing the mean and scaling to unit variance
++ MinMax Scaling - Rescaling all attributes to range between zero and one 
++ Normalization Scaling - Rescaling each observation(row) to unit value
+
+
+As a rule of thumb, always scale your data when the underlying algorithm calculates distance
+
+## Data Segregation(数据隔离)
 
