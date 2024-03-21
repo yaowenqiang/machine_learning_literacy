@@ -180,3 +180,13 @@ As a rule of thumb, always scale your data when the underlying algorithm calcula
 
 ## Data Segregation(数据隔离)
 
+Training and testing on the same set can result int overfitting
+
+## Underfitting and Fitting (欠拟合与过拟合)
+
+## Data Segregation Techniques
+
++ Train/Test Split
+  + Training set 70% to 80%
+  + Test set 20% to 30%
++ K-Fold Cross Validation

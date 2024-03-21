@@ -1,9 +1,11 @@
 import pandas
-import numpy
 import warnings
 from matplotlib import pyplot as plt
 from pandas.plotting._matplotlib import scatter_matrix
 import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+import numpy as np
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 pandas.set_option('display.max_rows', 500)
 pandas.set_option('display.max_columns', 500)
@@ -58,4 +60,21 @@ plt.figure(figsize=(11,11))
 plt.style.use('default')
 sns.heatmap(df.corr(), annot=True)
 
+x, y  = np.arange(10).reshape((5,2)), range(5)
+ic(x)
+ic(list(y))
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3,random_state=42)
+ic(x_train)
+ic(x_test)
+ic(y_train)
+ic(y_test)
+
+dataset = range(16)
+KFCrossValidator = KFold(n_splits=4, shuffle=False)
+KFdataset = KFCrossValidator.split(dataset)
+print("{} {:^61} {}".format("Round", "Training set", "Testing set"))
+
+for iteration, data in enumerate(KFdataset, start=1):
+    print(f"{iteration:^9} {data[0]} {str(data[1]):^45}")
 
