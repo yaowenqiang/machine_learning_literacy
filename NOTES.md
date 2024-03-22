@@ -190,3 +190,46 @@ Training and testing on the same set can result int overfitting
   + Training set 70% to 80%
   + Test set 20% to 30%
 + K-Fold Cross Validation
+
+# Model Training and Evaluation
+
+
+## What's Model Training
+
++ All Machine learning algorithms use one principle
++ Three types of Machine Learning algorithms(generally)
+  + Supervised Learning
+  + Unsupervised Learning
+  + Reinforcement Learning
+
+## Types of Supervised Learning Algorithms
+
++ Regression - for continuous values
++ Classification - For discrete(categorical) values
++
+
+
+In the context of Supervised Learning: Machine Learning training is the process of learning an ML algorithm how to find patterns in the input data so that they correspond to the target, resulting a machine learning  model
+
+
+## Foundational Concepts
+
++ Line slope(直线的斜率)
++ Derivative (导数)
++ instantaneous slope (瞬时斜率)
++
+
+If we want to get the minimum of a function, then we calculate its derivative when it is equal to zero!
+
+## Linear Regression Algorithms
+
+### Bias-Variance Tradeoff(偏差-方差窘境)
+
+## Regularization (正则化)
+
+## Linear Regression Regularization
+
++ Ridge Regression
++ Lasso Regression
++ Elastic Net Regressions (Combines techniques from Ridge and Lasso)
+
