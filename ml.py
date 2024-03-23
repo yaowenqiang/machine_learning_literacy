@@ -3,9 +3,12 @@ import warnings
 from matplotlib import pyplot as plt
 from pandas.plotting._matplotlib import scatter_matrix
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import KFold
 import numpy as np
+from sklearn.linear_model import LinearRegression,ElasticNet, Lasso, Ridge
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import train_test_split, KFold, cross_val_score
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 pandas.set_option('display.max_rows', 500)
 pandas.set_option('display.max_columns', 500)
@@ -77,4 +80,13 @@ print("{} {:^61} {}".format("Round", "Training set", "Testing set"))
 
 for iteration, data in enumerate(KFdataset, start=1):
     print(f"{iteration:^9} {data[0]} {str(data[1]):^45}")
+
+arr = df.values
+x = arr[:,0:12]
+y = arr[:,:12]
+
+max_error_scoring = 'max_error'
+scoring = 'reg_max_absolute_error'
+r2_scoring = 'r2'
+reg_mean_squared_error_scoring = 'reg_mean_squared_error'
 

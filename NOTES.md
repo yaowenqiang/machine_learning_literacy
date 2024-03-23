@@ -232,4 +232,45 @@ If we want to get the minimum of a function, then we calculate its derivative wh
 + Ridge Regression
 + Lasso Regression
 + Elastic Net Regressions (Combines techniques from Ridge and Lasso)
++ K-neighbors Regression
+  + Simple algorithm
+  + Relies on distance measurement
+  + Requires standardization
++ Support Vector Regression (SVR)
+  + Used for both regression and classification (SVM)
+  + Similar to linear regression
++ Decision Tree Regressor
+  + Used for both regression and classification
+  + Reaches the answer by structuring the data in three leaves
+
+
+## MOdel Evaluation
+
+### Regression Models Evalution Metrics
+
++ Max Error
+  + Captures the worst case
+  + How much we can tolerate
++ Mean Absolute Error  (平均绝对误差)
+  + Average of absolute errors
++ Mean Squared Error (均方误差)
+  + Average of squared errors
++ R squared 
++ Others
+
+
+MAE vs. MSE 
+
+MAE  |  MSE | 
+---- |  ---- |
+Removes negative signs by taking absolute value  | Removes negative signs by squaring the values
+More robust to outliers |  Better when we want to penallze outliers
+
+R^2 (Coefficient of Determination) (决定系数)
+
+Tell us how much percentage of the data is explained by the relationship but no direction
+
+Median absolute error
+Mean squared log error
+
 
