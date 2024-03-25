@@ -274,3 +274,58 @@ Median absolute error
 Mean squared log error
 
 
+## Handling Features
+
+Why we need to handle features? 
+
+Steps
++ Feature engineering(特征工程)
+  + Converting birth date to age
+  + Converting weekdays to numbers
++ Feature scaling
++ Feature selecting
+
+## More on ML: Model Improvement
+
++ Ensemble Methods（集成学习方法)
+  + Combines different ML techniques
+  + common categories
+    + Bagging
+    + Boosting
+    + Voting
+
+## Automated ML
+
+
+# Machine Learning DevOps
+
+## AI as a Service
+
+AI as a Service(AIaaS)
+
++ Abstracted as APIs
++ Works well with standardized  problems
+  + Vision
+  + Text to speech
+  + Sentiment Analysis
+
+Many players in the market
+
++ Microsoft/Google/Amazon
+
+Challenges
+
++ Performance
++ Compliance
++ Strict/Lock-in
+
+## Operationalization
+
++ Deploying our model
+  + Serialization and Deserialization: Python(Pickle, Joblib)
+  + Web services(REST)
++ Monitoring our model
+  + Logging
+  + Auto-healing
+
+
