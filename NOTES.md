@@ -329,3 +329,8 @@ Challenges
   + Auto-healing
 
 
+## More on ML: Data Science Process
+
+The Team Data Science Process(TDSP) is an agile, iterative data science methodology to deliver predictive analytics solutions and intelligent applications efficiently. TDSP helps improve team collaboration and learning
+
+> https://learn.microsoft.com/en-us/azure/architecture/data-science-process/overview

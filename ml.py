@@ -93,7 +93,7 @@ for iteration, data in enumerate(KFdataset, start=1):
 
 arr = df.values
 x = arr[:,0:12]
-y = arr[:,:12]
+y = arr[:,12]
 ic(x)
 ic(y)
 #os._exit(0)
@@ -117,13 +117,13 @@ for name, model in models:
     #kfold = KFold(n_splits=10, random_stat=7)
     kfold = KFold(n_splits=10)
     cv_results = cross_val_score(model, x, y, cv=kfold, scoring=max_error_scoring)
-    # cv_results1 = cross_val_score(model, x, y, cv=kfold, scoring=neg_mean_absolute_error_scoring)
-    # cv_results2 = cross_val_score(model, x, y, cv=kfold, scoring=r2_scoring)
-    # cv_results3 = cross_val_score(model, x, y, cv=kfold, scoring=neg_mean_squared_error_scoring)
-    # msg = '%s max error: %f, mean absolute error: %f, r2:%f, mean squared error: %f' %(name, cv_results.mean(), cv_results1.mean(), cv_results2.mean(), -cv_results3.mean())
-    # ic(msg)
+    cv_results1 = cross_val_score(model, x, y, cv=kfold, scoring=neg_mean_absolute_error_scoring)
+    cv_results2 = cross_val_score(model, x, y, cv=kfold, scoring=r2_scoring)
+    cv_results3 = cross_val_score(model, x, y, cv=kfold, scoring=neg_mean_squared_error_scoring)
+    msg = '%s max error: %f, mean absolute error: %f, r2:%f, mean squared error: %f' %(name, cv_results.mean(), cv_results1.mean(), cv_results2.mean(), -cv_results3.mean())
+    ic(msg)
 
-os._exit(0)
+# os._exit(0)
 x_train, x_test, y_train, y_test = train_test_split(x, y , test_size=0.20, random_state=1, shuffle=True)
 lasso_model = Lasso()
 lasso_model.fit(x_train, y_train)
@@ -133,28 +133,28 @@ predictions = lasso_model.predict(x_test)
 pickle.dump(lasso_model, open('model.pkl', 'wb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
-app = Flask(__name__)
-run_with_ngrok(app)
-
-@app.route('/predict', method=['POST'])
-def home():
-    x = int(request.arg.get('x', ''))
-    y = int(request.arg.get('y', ''))
-    month = int(request.arg.get('month', ''))
-    day = int(request.arg.get('day', ''))
-    FFMC = int(request.arg.get('FFMC', ''))
-    DMC = int(request.arg.get('DMC', ''))
-    DC = int(request.arg.get('DC', ''))
-    ISI = int(request.arg.get('ISI', ''))
-    temp = int(request.arg.get('temp', ''))
-    RH = int(request.arg.get('RH', ''))
-    wind = int(request.arg.get('wind', ''))
-    rain = int(request.arg.get('rain', ''))
-    prediction = lasso_model.predit([[x, y, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain]])
-    print('*'*100)
-    print(prediction)
-    return 'Prediction is ' + str(prediction[0])
-
-app.run()
+#app = Flask(__name__)
+#run_with_ngrok(app)
+#
+#@app.route('/predict', method=['POST'])
+#def home():
+#    x = int(request.arg.get('x', ''))
+#    y = int(request.arg.get('y', ''))
+#    month = int(request.arg.get('month', ''))
+#    day = int(request.arg.get('day', ''))
+#    FFMC = int(request.arg.get('FFMC', ''))
+#    DMC = int(request.arg.get('DMC', ''))
+#    DC = int(request.arg.get('DC', ''))
+#    ISI = int(request.arg.get('ISI', ''))
+#    temp = int(request.arg.get('temp', ''))
+#    RH = int(request.arg.get('RH', ''))
+#    wind = int(request.arg.get('wind', ''))
+#    rain = int(request.arg.get('rain', ''))
+#    prediction = lasso_model.predit([[x, y, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain]])
+#    print('*'*100)
+#    print(prediction)
+#    return 'Prediction is ' + str(prediction[0])
+#
+#app.run()
 
 
